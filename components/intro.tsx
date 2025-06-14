@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import MyPic from '../public/Profile.jpg'
+import MyPic from '../images/shanoli.jpeg'
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -26,25 +26,28 @@ export default function Intro() {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "tween",
-              duration: 0.2,
+              type: "spring",
+              stiffness: 125,
+              duration: 0.7,
             }}
+            className="relative"
           >
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
             <Image
               src={MyPic}
-              alt="Nipuni portrait"
+              alt="Shanoli portrait"
               width="192"
               height="192"
               quality="100"
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="relative h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl transition duration-300 hover:scale-105"
             />
           </motion.div>
 
-          <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
+          <motion.div
+            className="absolute -bottom-2 -right-2 text-4xl"
+            initial={{ opacity: 0, scale: 0, rotate: -180 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{
               type: "spring",
               stiffness: 125,
@@ -52,8 +55,8 @@ export default function Intro() {
               duration: 0.7,
             }}
           >
-            👋
-          </motion.span>
+            <span className="inline-block animate-wave">👋</span>
+          </motion.div>
         </div>
       </div>      <motion.h1
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
@@ -66,28 +69,26 @@ export default function Intro() {
         }}
       >
         <motion.span 
+          className="block"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="font-bold text-3xl sm:text-4xl"
         >
           Hello, I'm Shanoli Silva
         </motion.span>
-        <br />
-        <motion.span
+        <motion.span 
+          className="block mt-2 text-gray-700 dark:text-gray-300"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
-          className="text-xl sm:text-2xl"
         >
           Software Engineer | Full Stack Development | AI/ML Enthusiast
         </motion.span>
-        <br /><br />
-        <motion.p
+        <motion.p 
+          className="mt-4 text-lg text-gray-600 dark:text-gray-400"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.7 }}
-          className="text-lg sm:text-xl text-gray-700 dark:text-gray-300"
         >
           Experienced Software Engineer with a strong background in full-stack development and artificial intelligence. Skilled in designing scalable system architectures and building robust, production-grade AI solutions. Passionate about developing intelligent, user-centric applications that bridge cutting-edge technology with real-world impact.
         </motion.p>
@@ -113,17 +114,16 @@ export default function Intro() {
           Contact me here{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link><a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="https://drive.google.com/drive/folders/1ukextQGl0v11bMkZQMGoIyoXhe5RON7f?usp=sharing"
-          target="_blank"
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="/Shanoli Silva_CV.pdf"
+          download="Shanoli Silva_CV.pdf"
         >
-          Download CV{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+          Download CV
         </a>
 
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://www.linkedin.com/in/nipuninishadini/"
+          href="https://www.linkedin.com/in/shanoli-silva-4617b9215/"
           target="_blank"
         >
           <BsLinkedin />
@@ -131,7 +131,7 @@ export default function Intro() {
 
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com/Nipuni-De-Silva"
+          href="https://github.com/IT21324406"
           target="_blank"
         >
           <FaGithubSquare />
@@ -139,7 +139,7 @@ export default function Intro() {
 
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="mailto:nipuni20ch@gmail.com"
+          href="mailto:shanolisilva2001@gmail.com"
           target="_blank"
         >
           <FaEnvelope />

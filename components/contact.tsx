@@ -32,11 +32,13 @@ export default function Contact() {
       <SectionHeading>Contact me</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Please contact me directly at{" "}        <a className="underline" href="mailto:nipuni20ch@gmail.com">
-          nipuni20ch@gmail.com
+        Please contact me directly at{" "}
+        <a className="underline" href="mailto:shanolisilva2001@gmail.com">
+          shanolisilva2001@gmail.com
         </a>{" "}
         or through this form.
-      </p>      <form
+      </p>
+      <form
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
           try {
@@ -47,7 +49,7 @@ export default function Contact() {
               // Fallback to mailto link if server action fails
               const email = formData.get("senderEmail") as string;
               const message = formData.get("message") as string;
-              window.open(`mailto:nipuni20ch@gmail.com?subject=Portfolio Contact&body=${encodeURIComponent(`From: ${email}\n\n${message}`)}`);
+              window.open(`mailto:shanolisilva2001@gmail.com?subject=Portfolio Contact&body=${encodeURIComponent(`From: ${email}\n\n${message}`)}`);
               return;
             }
 
@@ -65,7 +67,7 @@ export default function Contact() {
           
           // Add a backup way to send email if the form submission fails
           const fallbackTimeout = setTimeout(() => {
-            window.open(`mailto:nipuni20ch@gmail.com?subject=Portfolio Contact&body=${encodeURIComponent(`From: ${email}\n\n${message}`)}`);
+            window.open(`mailto:shanolisilva2001@gmail.com?subject=Portfolio Contact&body=${encodeURIComponent(`From: ${email}\n\n${message}`)}`);
           }, 2000);
           
           // Clear the timeout if the form submits successfully

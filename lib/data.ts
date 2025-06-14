@@ -1,7 +1,9 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaJava, FaPython, FaAngular, FaHtml5, FaCss3Alt, FaJs, FaDatabase, FaDocker, FaGitAlt } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import { SiSpringboot, SiFastapi, SiFlask, SiMongodb, SiMysql, SiNeo4J, SiKubernetes, SiApachekafka, SiElasticsearch, SiJunit5 } from "react-icons/si";
+import { TbBrandVscode } from "react-icons/tb";
 import defaultImage from "@/public/Profile.jpg";
 // Import your project images here when you add them
 // For example:
@@ -40,89 +42,179 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Bachelor of Information and Communication Technology",
-    location: "University of Sri Jayewardenepura, Sri Lanka",
+    title: "BSc(Hons) in Information Technology",
+    location: "SLIIT",
     description:
-      "Currently pursuing my degree with a GPA of 3.83/4.00, focusing on software engineering and artificial intelligence.",
+      "Currently pursuing my degree on software engineering and artificial intelligence.",
     icon: React.createElement(LuGraduationCap),
-    date: "July 2021 - Present",
-  },  {
+    date: "May 2021 - Present",
+  },
+  {
     title: "Associate Software Engineer",
     location: "Zafer (AI)",
     description:
-      "Working as a core member development team specially for AI and R&D teams to design, develop, and deploy production-grade AI features like AI Summarizer, Document Chat, AI Search, AI AutoFill, and AI Insigh, MCP Protocols and A2A Protocolst. Led backend development using Python, Spring Boot, and Microservices.",
-    icon: React.createElement(FaReact),
+      "Contributing as a core member of the AI and R&D teams, focused on the design, development, and deployment of production-grade AI features. Key projects includes: AI Summarizer, Document Chat, AI Search, AI AutoFill, AI Insights, and the implementation of MCP (Multi-Component Pipeline) and A2A (Agent-to-Agent) protocols. Led backend development initiatives using Python (FastAPI) and Java (Spring Boot) within a microservices-based architecture. Collaborated across teams to build scalable, intelligent features, integrating AI/ML capabilities into enterprise-grade software solutions.",
+    icon: React.createElement(CgWorkAlt),
     date: "Nov 2024 - Present",
   },
   {
     title: "Intern Software Engineer",
     location: "ZorroSign Inc",
     description:
-      "Collaborated with cross-functional teams to deliver production-ready code, enhanced the Notification Service with 90% increased code coverage, contributed to AI Document Autofill feature, and built a full-stack IoT Device Management solution.",
+      "Collaborated with cross-functional teams to deliver production-ready code across multiple services. Enhanced the Notification Service, achieving a 90% increase in code coverage through comprehensive testing and refactoring. Contributed to the development of the AI-powered Document Autofill feature, integrating intelligent data extraction and pre-filling capabilities. Designed and implemented a full-stack IoT Device Management solution, handling real-time device data and control using modern web technologies.",
     icon: React.createElement(CgWorkAlt),
     date: "May 2024 - Oct 2024",
   },
 ] as const;
 
-export const projectsData = [  {
-    title: "Final Year Research Project - Knowledge Graph-based Retrieval-Augmented Generation System",
-    tags: ["Python", "LangChain", "Neo4j", "FlaskAPI"],
-    imageUrl: defaultImage,  // Replace with: knowledgeGraphImg
-    githubUrl: "https://github.com/Nipuni-De-Silva/Knowledge-Graph-RAG",
+export const projectsData = [
+  {
+    title: "Software User Interface Personalization through User Feedback and User Behavior",
+    description: "University Final Year Research Project (Group, In-progress)",
+    tags: ["Python", "RAG", "Lang Chain", "React js"],
+    githubUrl: "https://github.com/IT21324406",
+    isResearch: true,
   },
   {
-    title: "ReviewBar - Augmented Product Review System",
-    tags: ["Vue JS", "Node", "Express JS", "MongoDB"],
-    imageUrl: defaultImage,  // Replace with: reviewBarImg
-    githubUrl: "https://github.com/Nipuni-De-Silva/ReviewBar.git",
+    title: "Laundry Service Management Mobile Application",
+    description: "Individual Project",
+    tags: ["Java", "Google Firebase", "Android Studio"],
+    githubUrl: "https://github.com/IT21324406",
   },
   {
-    title: "Workout-Buddy - Personalized Fitness App",
-    tags: ["React JS", "Node", "Express JS", "MongoDB"],
-    imageUrl: defaultImage,  // Replace with: workoutBuddyImg
-    githubUrl: "https://github.com/Nipuni-De-Silva/Workout-Buddy.git",
+    title: "Income Expense Management Mobile Application",
+    description: "Group Project",
+    tags: ["Kotlin", "SQLite DB", "Android Studio"],
+    githubUrl: "https://github.com/IT21324406",
   },
   {
-    title: "Note-it - Note Taking Web Application",
-    tags: ["React JS", "Node", "Express JS", "MongoDB"],
-    imageUrl: defaultImage,  // Replace with: noteItImg
-    githubUrl: "https://github.com/Nipuni-De-Silva/Note-it.git",
+    title: "Vehicle Service Station Web Application",
+    description: "Group Project",
+    tags: ["ReactJS", "ExpressJS", "NodeJS", "MySQL"],
+    githubUrl: "https://github.com/IT21324406",
   },
   {
-    title: "UNI-Share - Blogging Platform for Uni Students",
-    tags: ["HTML", "CSS", "PHP", "MySQL"],
-    imageUrl: defaultImage,  // Replace with: uniShareImg
-    githubUrl: "https://github.com/Nipuni-De-Silva/UNI-Share.git",
-  },  {
-    title: "Local Library - Online Catalog for Local Library",
-    tags: ["JavaScript", "Express JS", "MongoDB"],
-    imageUrl: defaultImage,  // Replace with: localLibraryImg
-    githubUrl: "https://github.com/Nipuni-De-Silva/express-locallibrary.git",
+    title: "Pharmacy Management System",
+    description: "Group Project",
+    tags: ["Java", "MySQL"],
+    githubUrl: "https://github.com/IT21324406",
   }
 ] as const;
 
 export const skillsData = [
-  "Java Spring Boot",
-  "Python FastAPI",
-  "Python FlaskAPI",
-  "Angular",
-  "HTML/CSS/JS",
-  "LLM",
-  "RAG",
-  "MCP Protocol",
-  "A2A Protocol",
-  "Prompt Engineering",
-  "Microservices",
-  "RESTful API",
-  "MongoDB",
-  "MySQL",
-  "VectorDB",
-  "Neo4j",
-  "Git",
-  "Docker",
-  "Kubernetes",
-  "Apache Kafka",
-  "ELK Stack",
-  "Unit Testing",
-  "Agile/Scrum",
+  {
+    name: "Java Spring Boot",
+    icon: SiSpringboot,
+    category: "Backend"
+  },
+  {
+    name: "Python FastAPI",
+    icon: SiFastapi,
+    category: "Backend"
+  },
+  {
+    name: "Python FlaskAPI",
+    icon: SiFlask,
+    category: "Backend"
+  },
+  {
+    name: "Angular",
+    icon: FaAngular,
+    category: "Frontend"
+  },
+  {
+    name: "HTML/CSS/JS",
+    icon: FaHtml5,
+    category: "Frontend"
+  },
+  {
+    name: "LLM",
+    icon: TbBrandVscode,
+    category: "AI/ML"
+  },
+  {
+    name: "RAG",
+    icon: TbBrandVscode,
+    category: "AI/ML"
+  },
+  {
+    name: "MCP Protocol",
+    icon: TbBrandVscode,
+    category: "AI/ML"
+  },
+  {
+    name: "A2A Protocol",
+    icon: TbBrandVscode,
+    category: "AI/ML"
+  },
+  {
+    name: "Prompt Engineering",
+    icon: TbBrandVscode,
+    category: "AI/ML"
+  },
+  {
+    name: "Microservices",
+    icon: FaDocker,
+    category: "Architecture"
+  },
+  {
+    name: "RESTful API",
+    icon: FaDatabase,
+    category: "Architecture"
+  },
+  {
+    name: "MongoDB",
+    icon: SiMongodb,
+    category: "Database"
+  },
+  {
+    name: "MySQL",
+    icon: SiMysql,
+    category: "Database"
+  },
+  {
+    name: "VectorDB",
+    icon: FaDatabase,
+    category: "Database"
+  },
+  {
+    name: "Neo4j",
+    icon: SiNeo4J,
+    category: "Database"
+  },
+  {
+    name: "Git",
+    icon: FaGitAlt,
+    category: "Tools"
+  },
+  {
+    name: "Docker",
+    icon: FaDocker,
+    category: "Tools"
+  },
+  {
+    name: "Kubernetes",
+    icon: SiKubernetes,
+    category: "Tools"
+  },
+  {
+    name: "Apache Kafka",
+    icon: SiApachekafka,
+    category: "Tools"
+  },
+  {
+    name: "ELK Stack",
+    icon: SiElasticsearch,
+    category: "Tools"
+  },
+  {
+    name: "Unit Testing",
+    icon: SiJunit5,
+    category: "Testing"
+  },
+  {
+    name: "Agile/Scrum",
+    icon: TbBrandVscode,
+    category: "Methodology"
+  }
 ] as const;
